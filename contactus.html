@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to Vecta Corp.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/jquery.mobilemenu.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#responsive-menu').mobileMenu();
+		});
+    //CHECK RADIO BUTTONS
+        $(function() {
+           $(".widget input").checkboxradio();
+        });
+    //SELECT MENU
+        $(function() {
+            $("#companysize").selectmenu();
+            });
+    //BUTTON
+        $( function() {
+            $( ".widget2 input[type=submit], .widget2 a, .widget2 button" ).button();
+            $( "button, input, a" ).click( function( event ) {
+                event.preventDefault();
+                } );
+            } );
+    //DIALOG BOX
+         $( function() {
+            $("#dialog").dialog({
+                autoOpen: false;
+            });
+        });
+	</script>
+</head>
+<body>
+	<main class="container">
+		<figure class="three columns">
+			<img src="images/logo.gif" class="scale-with-grid" alt="">
+		</figure>
+		
+		<nav class="thirteen columns">
+			<ul id="responsive-menu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="solutions.html">Solutions</a></li>
+				<li><a href="support.html">Support</a></li>
+				<li><a href="contactus.html">Contact Us</a></li>
+			</ul>
+		</nav>
+		
+		<header class="sixteen columns">
+			<img src="images/header.gif" class="scale-with-grid" alt="">
+		</header>
+		
+		<section id="welcome" class="eleven columns">
+			<h4>Contact Us</h4>
+			<form name="contactform" action="http://www.vectacorp.com/vc/scripts/contactus.asp" method="post">
+				<fieldset>
+			    <legend>Contact a Sales Representative</legend>
+			    Name:
+			    <input type="text" name="name" maxlength="30" required="">
+			    Company Name:
+			    <input type="text" name="companyname" maxlength="30" required="">
+			    Phone:
+			    <input type="tel" name="phonenumber" maxlength="25" required="" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Format: 555-555-5555">
+			    
+			    Email:
+				<input type="email" name="email" maxlength="30" required="">
+			   
+               <div class="widget">
+                What VectaCorp products are you interested in?<br>
+                <label for="vProspect">vProspect 2.0</label><input type="checkbox" name="vProspect" value="vProspect" id="vProspect">
+                <label for="vConvert">vConvert 2.0</label><input type="checkbox" name="vConvert" value="vConvert" id="vConvert">
+                <label for="vRetain">vRetain 1.0</label><input type="checkbox" name="vRetain" value="vRetain" id="vRetain">
+               
+			    
+			    <br>
+			    What is your current infrastructure?<br>
+			    <label for="Mac">Mac</label><input type="radio" name="Mac" value="Mac" id="Mac">
+			    <label for="Linux">Linux</label><input type="radio" name="Linux" value="Linux" id="Linux">
+			    <label for="Unix">Unix</label><input type="radio" name="Unix" value="Unix" id="Unix">
+			    <label for="Windows">Windows</label><input type="radio" name="Windows" value="Windows" id="Windows">
+                </div>
+			    <br>
+			    How many employees do you have?
+			    <select name="companysize" id="companysize">
+                    <option value="1-10">1-10</option>
+                    <option value="11-100">11-100</option>
+                    <option value="101-1000">101-1000</option>
+                    <option value="More than 1000">More than 1000</option>
+		        </select>
+                
+			    How did you hear about us?
+			    <select name="hearaboutus" multiple="" size="5">
+                    <option value="Magazine Ad">Magazine Ad</option>
+                    <option value="Radio Ad">Radio Ad</option>
+                    <option value="TV Ad">TV Ad</option>
+                    <option value="Word of Mouth">Word of Mouth</option>
+                    <option value="Other">Other</option>
+		        </select>
+                
+			    Questions or comments for our sales representatives?
+			    <textarea name="questions" size="30" rows="5"></textarea>
+			    
+			    <div class="widget2">
+			        <input class="ui-button ui-widget ui-corner-all" type="submit" name="submit" value="Submit Now">
+			    </div>
+			    <div id="dialog" title="Basic dialog">
+                  <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+                </div>
+                
+		    	</fieldset>
+			</form>
+	    </section>
+		
+		<section id="testimonials" class="five columns">
+			<h4>Map</h4>
+			<p>&nbsp;</p>
+
+		</section>
+	</main>
+</body>
+</html>
