@@ -18,6 +18,9 @@
 	<script src="js/jquery.mobilemenu.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
 	<script>
+
+        
+//TOOL TIP        
 		$(document).ready(function(){
 			$('#responsive-menu').mobileMenu();
             $('#menu').bind('mouseenter', function(){
@@ -26,18 +29,10 @@
 		});
         
     
-//        $('#menu').bind('mouseenter', function(){
-//            $( document ).tooltip();
-//            console.log("log");
-//        });
-        
-//        $( function() {
-//    $( document ).tooltip();
-//  } );
      //TABS   
-        $( function() {
-        $( "#tabs" ).tabs();
-        } );
+        $(function() {
+        $("#tabs").tabs();
+        });
     //ACCORDION    
         $( function() {
         $( "#accordion" ).accordion();
@@ -56,7 +51,7 @@
 				<li><a href="aboutus.html" title="Learn More">About Us</a></li>
 				<li><a href="solutions.html" title="What we do">Solutions</a></li>
 				<li><a href="support.html" title="How Can We Help You?">Support</a></li>
-				<li><a href="contactus.html">Contact Us</a></li>
+				<li><a href="contactus.html" title="Get in Touch">Contact Us</a></li>
 			</ul>
 		</nav>
 		
@@ -76,9 +71,9 @@
 			<!-- INSERT TABS HERE -->
 			<div id="tabs">
                <ul>
-                   <li><a href="#tabs-1"></a>vProspect 2.0</li>
-                   <li><a href="#tabs-2"></a>vConvert 2.0</li>
-                   <li><a href="#tabs-3"></a> vRetain 1.0</li>
+                   <li><a href="#tabs-1">vProspect 2.0</a></li>
+                   <li><a href="#tabs-2">vConvert 2.0</a></li>
+                   <li><a href="#tabs-3">vRetain 1.0</a></li>
                </ul>
                 <div id="tabs-1">
                    <img href="images/logo_vprospect.gif">
